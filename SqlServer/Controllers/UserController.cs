@@ -45,7 +45,7 @@ namespace SqlServer.Controllers
         {
             userDB.Remove(userDB.Users.First(p=>p.Id == id));
             userDB.SaveChanges();
-            return Ok("SuccessNmaga");
+            return Ok("Success");
         }
     }
 }
