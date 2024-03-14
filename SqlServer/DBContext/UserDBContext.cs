@@ -10,14 +10,6 @@ namespace SqlServer.DBContext
         {
             
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("SqlServerBase", builder =>
-            {
-                builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
-            });
-            base.OnConfiguring(optionsBuilder);
-        }
 
         public DbSet<UserModel> Users { get; set; }
     }
